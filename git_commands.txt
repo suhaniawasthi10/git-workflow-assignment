@@ -1,0 +1,104 @@
+Git Commands Used in the Assignment
+
+Project: git-workflow-assignment
+Repository: https://github.com/suhaniawasthi10/git-workflow-assignment
+
+Commands are listed in workflow order. Repeated inspection commands are documented once.
+Files were created and edited locally before the relevant staging and commit commands.
+
+1. git init -b main
+   Initialize the local repository with main as its initial branch.
+
+2. git config user.name "Suhani Awasthi"
+   Set the commit author name for this repository.
+
+3. git config user.email "177670286+suhaniawasthi10@users.noreply.github.com"
+   Set the GitHub privacy email used to attribute commits to my account.
+
+4. git add index.html about.html
+   Stage both HTML files for the initial commit.
+
+5. git commit -m "Create initial home and about pages"
+   Record the initial versions of both HTML files.
+
+6. git log --oneline
+   Display a compact commit history. Used after the first and second commits.
+
+7. git status
+   Show the current branch and staged or unstaged changes. Repeated after workflow steps.
+
+8. git --no-pager diff
+   Show the home page edit before staging it, without opening a pager.
+
+9. git add index.html
+   Stage the updated home page description.
+
+10. git commit -m "Update home page project description"
+   Record the second commit containing the home page modification.
+
+11. git branch feature
+   Create a branch named feature at the current commit.
+
+12. git switch feature
+   Switch to feature before making the learning-goals change.
+
+13. git add about.html
+   Stage the learning-goals section added on feature.
+
+14. git commit -m "Add learning goals on feature branch"
+   Record the about-page change on the feature branch.
+
+15. git switch main
+   Return to main before merging the feature work.
+
+16. git merge --no-ff feature -m "Merge feature branch into main"
+   Merge feature into main with an explicit merge commit so branch activity stays visible.
+
+17. git --no-pager log --oneline --graph --all --decorate
+   Display the commit graph, all branches, and branch labels without a pager.
+
+18. git add .gitignore
+   Stage ignore rules for *.log files and the temp/ folder.
+
+19. git commit -m "Ignore log files and temporary folder"
+   Save the ignore rules in repository history.
+
+20. git check-ignore -v demo.log temp/notes.txt
+   Show the exact .gitignore rule that excludes each sample path.
+
+21. git status --ignored
+   Show ignored files, confirming that demo.log and temp/ are excluded.
+
+22. git add undo-demo.txt
+   Stage the demonstration file for the additional commit.
+
+23. git commit -m "Add file for undo demonstration"
+   Create the additional commit that will be undone.
+
+24. git --no-pager show --stat HEAD
+   Show the latest commit and its file-change summary. Used before and after the revert.
+
+25. git revert --no-edit HEAD
+   Undo the latest commit by creating a new inverse commit, preserving the original history.
+
+26. git add git_commands.txt
+   Stage this command documentation file.
+
+27. git commit -m "Document Git commands and explanations"
+   Include the command documentation in the repository.
+
+28. git remote add origin https://github.com/suhaniawasthi10/git-workflow-assignment.git
+   Connect the existing local repository to the empty public GitHub repository.
+
+29. git remote -v
+   Display the configured fetch and push URLs for origin.
+
+30. git push -u origin main
+   Push main and its complete reachable commit history, setting its upstream branch.
+
+31. git push -u origin feature
+   Publish feature as a separate remote branch and set its upstream.
+
+32. git branch -vv
+   Show local branches, their latest commits, and their upstream tracking branches.
+
